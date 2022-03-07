@@ -5,7 +5,7 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
 const jwt = require("jsonwebtoken");
-const JWt_SECRET = "@$HR@j0k";
+const JWt_SECRET = process.env.JWt_SECRET;
 
 const fetchuser = require("../middleware/fetchuser")
 
