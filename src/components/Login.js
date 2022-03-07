@@ -7,7 +7,7 @@ const Login = ({showAlert}) => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch(`http://localhost:5000/api/auth/login`, {
+    const response = await fetch(`https://icloudnotebook-backend.herokuapp.com/api/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -34,7 +34,7 @@ const Login = ({showAlert}) => {
   };
 
   return (
-    <>
+    <div className="mx-4 my-2">
     <h1 className="display-1">Login to use iNoteBook</h1>
     <form onSubmit={onSubmit}>
       
@@ -53,11 +53,11 @@ const Login = ({showAlert}) => {
           required
         />
       </div>
-      <div className="mt-3 container">
+      <div className="mt-5 container">
         <label htmlFor="inputPassword" className="col-sm-2 col-form-label">
           Password
         </label>
-        <div className="col-sm-10 ">
+        
           <input
             type="password"
             className="form-control"
@@ -67,7 +67,7 @@ const Login = ({showAlert}) => {
             onChange={onChange}
             required
           />
-        </div>
+
       </div>
       <div className="mt-3 text-center">
         <button type="submit" className="btn btn-outline-success mb-3">
@@ -75,7 +75,7 @@ const Login = ({showAlert}) => {
         </button>
       </div>
     </form>
-    </>
+    </div>
   );
 };
 

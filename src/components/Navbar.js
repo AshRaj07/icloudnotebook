@@ -25,10 +25,9 @@ const Navbar = () => {
 
       <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><Link to="/" className={`nav-link px-2 ${location.pathname==="/"?"link-secondary":"link-dark"}`}>Home</Link></li>
-        <li><Link to="/features"className={`nav-link px-2 ${location.pathname==="/features"?"link-secondary":"link-dark"}`}>Features</Link></li>
-        <li><Link to="/pricing" className={`nav-link px-2 ${location.pathname==="/pricing"?"link-secondary":"link-dark"}`}>Pricing</Link></li>
-        <li><Link to="/faq" className={`nav-link px-2 ${location.pathname==="/faq"?"link-secondary":"link-dark"}`}>FAQs</Link></li>
-        <li><Link to="/about" className={`nav-link px-2 ${location.pathname==="/about"?"link-secondary":"link-dark"}`}>About</Link></li>
+        {/* <li><Link to="/features"className={`nav-link px-2 ${location.pathname==="/features"?"link-secondary":"link-dark"}`}>Features</Link></li> */}
+        <li><Link to="/about" className={`nav-link px-2 ${location.pathname==="/about"?"link-secondary":"link-dark"}`}>About Us</Link></li>
+        <li><Link to="/contact" className={`nav-link px-2 ${location.pathname==="/contact"?"link-secondary":"link-dark"}`}>Contact Us</Link></li>
       </ul>
 
       { !localStorage.getItem('token')? <div className="col-md-3 text-end">

@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Alert from "./components/Alert"
 import { useState } from "react";
+import Contact from "./components/Contact";
 
 function App() {
 
@@ -42,6 +43,9 @@ function App() {
             </Route>
             <Route exact path="/about">
               <About />
+            </Route>
+            <Route  path="/contact">
+              <Contact />
             </Route>
           </Switch>
         </div>
